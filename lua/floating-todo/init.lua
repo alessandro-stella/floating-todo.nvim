@@ -22,7 +22,7 @@ local function win_config()
 		height = height,
 		col = center_in(vim.o.columns, width),
 		row = center_in(vim.o.lines, height),
-		-- border = "single",
+		border = "single",
 	}
 end
 
