@@ -8,6 +8,10 @@ local function expand_path(path)
 	return path
 end
 
+local function center_in(outer, inner)
+	return (outer - inner) / 2
+end
+
 local function win_config()
 	local width = math.min(math.floor(vim.o.columns * 0.8), 64)
 	local height = math.floor(vim.o.lines * 0.8)
@@ -16,8 +20,8 @@ local function win_config()
 		relative = "editor",
 		width = width,
 		height = height,
-		col = 1,
-		row = 1,
+		col = center_in(vim.o.columns, width),
+		row = center_in(vim.o.lines, height),
 		border = "single",
 	}
 end
