@@ -48,8 +48,8 @@ local function setup_user_commands(opts)
 	end, {})
 end
 
-M.setup = function()
-	setup_user_commands()
+M.setup = function(opts)
+	setup_user_commands(opts)
 end
 
 return M
