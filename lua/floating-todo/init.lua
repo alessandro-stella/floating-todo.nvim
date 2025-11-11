@@ -29,7 +29,7 @@ local function open_floating_file(target_file)
 		vim.notify("Todo file does not exist at directory: " .. expanded_path, vim.log.levels.ERROR)
 	end
 
-	local buf = vim.fm.bufnr(expanded_path, true)
+	local buf = vim.fn.bufnr(expanded_path, true)
 
 	if buf == -1 then
 		buf = vim.api.nvim_reate_buf(false, false)
